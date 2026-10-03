@@ -500,10 +500,7 @@ p {
   box-shadow: var(--shadow);
 }
 
-.psychologist-photo {
-  height: 330px;
-  position: relative;
-}
+
 
 .psychologist-photo .photo-placeholder {
   background: linear-gradient(135deg, #dce5dc, #c0d0c5);
