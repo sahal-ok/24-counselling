@@ -29,9 +29,9 @@
     <div class="container nav">
 
       <a href="#home" class="logo">
-        <span class="logo-mark">24</span>
+        <img src="logo.png" alt="24 Counselling">
         <span>
-          <strong>Counselling</strong>
+          <strong>24 Counselling</strong>
           <small>Psychological Wellness</small>
         </span>
       </a>
@@ -128,10 +128,10 @@
         <div class="hero-card">
 
           <div class="hero-photo">
-            <div class="photo-placeholder">
-              <span>Clinic Photo</span>
-              <small>Add image later</small>
-            </div>
+              <img
+                src="clinic.jpg"
+                alt="24 Counselling clinic"
+              />
           </div>
 
           <div class="floating-card">
@@ -191,12 +191,12 @@
 
       <div class="container about-grid">
 
-        <div class="about-image">
+        <!-- <div class="about-image">
           <div class="large-photo-placeholder">
             <span>Clinic / Team Photo</span>
             <small>Your photo goes here</small>
           </div>
-        </div>
+        </div> -->
 
         <div class="about-content">
 
@@ -282,8 +282,8 @@
           <article class="psychologist-card">
 
             <div class="psychologist-photo">
-              <img src="Asmina.jpeg" alt="Asmina">
-              </div>
+              <img src="ayisha_fila.jpeg" alt="Asmina">
+              
 
               <span class="verified-badge">
                 ✓ Professional
@@ -293,39 +293,50 @@
             <div class="psychologist-info">
 
               <span class="role">
-                Clinical Psychologist
+                Consultant Psychologist
               </span>
 
-              <h3>Asmina</h3>
+              <h3>Ayisha Fila</h3>
 
               <p class="qualification">
-                M.Sc. Psychology · Clinical Psychology
+                M.Sc. Psychology · <strong> 2 Years Experience</strong> 
               </p>
-
+               <div class="specializations">
+                <span>Malayalam</span>
+                <span>English</span>
+                <span>Tamil</span>
+              </div>
               <p>
                 Specializes in helping individuals navigate anxiety,
                 emotional difficulties, relationships and personal growth.
               </p>
 
               <div class="specializations">
+                <span>Relationships</span>
                 <span>Anxiety</span>
                 <span>Stress</span>
-                <span>Relationships</span>
                 <span>Personal Growth</span>
+                <span>Emotional Support</span>
               </div>
 
               <div class="doctor-contact">
-
-                <a href="tel:+91 6238205314">
+                <div class="session-fee">
+                    ₹800 <span>per session</span>
+                </div>
+                <!-- <a href="tel:+91 6238205314">
                   ☎ +91 6238 205324
                 </a>
 
                 <a href="https://instagram.com/" target="_blank">
                   Instagram ↗
-                </a>
+                </a> -->
 
               </div>
+              <button class="voice-btn" onclick="toggleVoice('ananyaVoice', this)">
+                      🔊 Listen to Dr. Ananya
+              </button>
 
+              <audio id="ananyaVoice" src="voice.ogg"></audio>
               <a href="#appointment" class="doctor-button">
                 Book with Dr. Ananya →
               </a>
@@ -350,14 +361,20 @@
             <div class="psychologist-info">
 
               <span class="role">
-                Counselling Psychologist
+                Consultant Psychologist
               </span>
 
-              <h3>Anjali</h3>
+              <h3>Anjali PP</h3>
 
               <p class="qualification">
-                M.A. Psychology · Counselling
+                M.Sc. Psychology · <strong>2 Years Experience</strong>
               </p>
+
+              <div class="specializations">
+                <span>Malayalam</span>
+                <span>English</span>
+                <span>Tamil</span>
+              </div>
 
               <p>
                 Works with adolescents and adults experiencing stress,
@@ -366,6 +383,7 @@
               </p>
 
               <div class="specializations">
+                <span>Relationships</span>
                 <span>Self-Esteem</span>
                 <span>Stress</span>
                 <span>Life Changes</span>
@@ -373,19 +391,25 @@
               </div>
 
               <div class="doctor-contact">
-
-                <a href="tel:+919000000002">
+                <div class="session-fee">
+                    ₹800 <span>per session</span>
+                </div>
+                <!-- <a href="tel:+919000000002">
                   ☎ +91 90000 00002
                 </a>
 
                 <a href="https://instagram.com/" target="_blank">
                   Instagram ↗
-                </a>
+                </a> -->
 
               </div>
+              <button class="voice-btn" onclick="toggleVoice('ananyaVoice', this)">
+                      🔊 Listen to Anjali PP
+              </button>
 
+              <audio id="ananyaVoice" src="voice.ogg"></audio>
               <a href="#appointment" class="doctor-button">
-                Book with Dr. Rahul →
+                Book with Anjali PP →
               </a>
 
             </div>
@@ -398,9 +422,8 @@
           <article class="psychologist-card">
 
             <div class="psychologist-photo">
-              <div class="photo-placeholder">
-                <span>Photo</span>
-              </div>
+              <img src="Asmina.jpeg" alt="Anjali">
+              
 
               <span class="verified-badge">
                 ✓ Professional
@@ -410,15 +433,19 @@
             <div class="psychologist-info">
 
               <span class="role">
-                Counselling Psychologist
+                Consultant Psychologist
               </span>
 
-              <h3>Dr. Meera Thomas</h3>
+              <h3>Asmina K</h3>
 
               <p class="qualification">
-                M.A. Psychology · Counselling Psychology
+                M.Sc. Psychology · <strong>2 Years Experience</strong>
               </p>
 
+               <div class="specializations">
+                <span>Malayalam</span>
+                <span>English</span>
+              </div>
               <p>
                 Supports individuals dealing with relationship concerns,
                 family difficulties, emotional wellbeing and personal
@@ -434,18 +461,24 @@
 
               <div class="doctor-contact">
 
-                <a href="tel:+919000000003">
+                <!-- <!-- <a href="tel:+919000000003">
                   ☎ +91 90000 00003
-                </a>
-
-                <a href="https://instagram.com/" target="_blank">
+                </a> -->
+                <div class="session-fee">
+                    ₹1000 <span>per session</span>
+                </div>
+                <!-- <a href="https://instagram.com/" target="_blank">
                   Instagram ↗
-                </a>
+                </a> -->
 
               </div>
+              <button class="voice-btn" onclick="toggleVoice('ananyaVoice', this)">
+                      🔊 Listen to Asmina K
+              </button>
 
+              <audio id="ananyaVoice" src="voice.ogg"></audio>
               <a href="#appointment" class="doctor-button">
-                Book with Dr. Meera →
+                Book with Asmina K →
               </a>
 
             </div>
@@ -761,7 +794,7 @@
             </a>
 
             <a
-              href="https://wa.me/919000000000"
+              href="https://wa.me/+916238205314"
               target="_blank"
               class="button button-whatsapp"
             >
@@ -776,8 +809,8 @@
 
           <div>
             <span>Clinic Hours</span>
-            <strong>Mon – Sat</strong>
-            <p>9:00 AM – 7:00 PM</p>
+            <strong>Mon – Sun</strong>
+            <p>7:00 AM – 10:00 PM</p>
           </div>
 
           <div>
@@ -925,8 +958,8 @@
 
             <div>
               <small>Phone</small>
-              <a href="tel:+919000000000">
-                +91 90000 00000
+              <a href="+91 62382 05314">
+                +91 62382 05314
               </a>
             </div>
 
@@ -954,12 +987,12 @@
             <div>
               <small>Clinic</small>
               <strong>
-                Your Clinic Address
+                Kerala,India
               </strong>
 
-              <p>
+              <!-- <p>
                 Kerala, India
-              </p>
+              </p> -->
             </div>
 
           </div>
@@ -967,24 +1000,24 @@
 
           <div class="social-links">
 
-            <a href="https://instagram.com/" target="_blank">
+            <a href="https://www.instagram.com/24_counselling" target="_blank">
               Instagram
             </a>
 
-            <a href="https://facebook.com/" target="_blank">
+            <!-- <a href="https://facebook.com/" target="_blank">
               Facebook
             </a>
 
             <a href="https://linkedin.com/" target="_blank">
               LinkedIn
-            </a>
+            </a> -->
 
           </div>
 
         </div>
 
 
-        <div class="contact-map">
+        <!-- <div class="contact-map">
 
           <div class="map-placeholder">
 
@@ -998,7 +1031,7 @@
               Get Directions
             </a>
 
-          </div>
+          </div> -->
 
         </div>
 
@@ -1052,12 +1085,12 @@
 
         <h4>Contact</h4>
 
-        <a href="tel:+919000000000">
-          +91 90000 00000
+        <a href="tel:+91 62382 05314">
+          +91 62382 05314
         </a>
 
-        <a href="mailto:hello@24counselling.com">
-          hello@24counselling.com
+        <a href="https://www.instagram.com/24_counselling">
+          instagram : 24_counselling
         </a>
 
         <span>
@@ -1071,17 +1104,17 @@
 
         <h4>Follow Us</h4>
 
-        <a href="https://instagram.com/" target="_blank">
+        <a href="https://www.instagram.com/24_counselling" target="_blank">
           Instagram
         </a>
 
-        <a href="https://facebook.com/" target="_blank">
+        <!-- <a href="https://facebook.com/" target="_blank">
           Facebook
         </a>
 
         <a href="https://linkedin.com/" target="_blank">
           LinkedIn
-        </a>
+        </a> -->
 
       </div>
 
@@ -1096,10 +1129,10 @@
           © 2026 24 Counselling. All rights reserved.
         </span>
 
-        <span>
+        <!-- <span>
           This website provides general information and does not replace
           professional medical or psychological care.
-        </span>
+        </span> -->
 
       </div>
 

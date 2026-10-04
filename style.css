@@ -105,7 +105,12 @@ p {
   align-items: center;
   gap: 10px;
 }
-
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
 .logo-mark {
   width: 42px;
   height: 42px;
@@ -193,6 +198,12 @@ p {
   overflow: hidden;
   display: flex;
   align-items: center;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-background {
@@ -484,15 +495,17 @@ p {
 }
 
 .psychologist-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
 }
 
+/* Each psychologist card */
 .psychologist-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  transition: 0.3s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .psychologist-card:hover {
@@ -500,6 +513,12 @@ p {
   box-shadow: var(--shadow);
 }
 
+/* Psychologist photo */
+.psychologist-photo {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+}
 
 
 .psychologist-photo .photo-placeholder {
@@ -548,7 +567,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .specializations span {
@@ -563,7 +582,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  margin: 20px 0;
+  margin: 0 0;
 }
 
 .doctor-contact a {
@@ -581,12 +600,24 @@ p {
   font-weight: 700;
 }
 .psychologist-photo img {
-  width: 100%;
-  height: 100%;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
+.session-fee {
+    margin: 18px 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #285f50;
+}
 
+.session-fee span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6b7773;
+}
 /* ================= SERVICES ================= */
 
 .services {
@@ -1097,6 +1128,34 @@ p {
   font-size: 9px;
 }
 
+/* ================= VOICE ================= */
+.voice-btn {
+    width: 100%;
+    padding: 13px 18px;
+    margin-top: 18px;
+
+    border: 1px solid #2f6f5e;
+    border-radius: 10px;
+
+    background: #f4f8f5;
+    color: #2f6f5e;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.voice-btn:hover {
+    background: #2f6f5e;
+    color: white;
+}
+
+.voice-btn.playing {
+    background: #2f6f5e;
+    color: white;
+}
 
 /* ================= RESPONSIVE ================= */
 

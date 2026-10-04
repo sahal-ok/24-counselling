@@ -149,3 +149,38 @@ revealElements.forEach((element) => {
   revealObserver.observe(element);
 
 });
+
+//voice
+function toggleVoice(audioId, button) {
+    const audio = document.getElementById(audioId);
+
+    // Stop all other psychologist voices
+    document.querySelectorAll("audio").forEach(otherAudio => {
+        if (otherAudio !== audio) {
+            otherAudio.pause();
+            otherAudio.currentTime = 0;
+        }
+    });
+
+    // Reset all buttons
+    document.querySelectorAll(".voice-btn").forEach(btn => {
+        btn.innerHTML = "🔊 Listen";
+        btn.classList.remove("playing");
+    });
+
+    if (audio.paused) {
+        audio.play();
+
+        button.innerHTML = "⏸ Pause";
+        button.classList.add("playing");
+
+        audio.onended = function () {
+            button.innerHTML = "🔊 Listen";
+            button.classList.remove("playing");
+        };
+    } else {
+        audio.pause();
+        button.innerHTML = "🔊 Listen";
+        button.classList.remove("playing");
+    }
+}
