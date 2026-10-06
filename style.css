@@ -93,6 +93,7 @@ p {
 }
 
 .nav {
+  position: relative;
   min-height: 82px;
   display: flex;
   align-items: center;
@@ -1170,7 +1171,16 @@ p {
   .menu-button {
     display: block;
   }
-
+  /* Center logo only on mobile/tablet */
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
   .mobile-menu {
     padding: 20px;
     background: white;
