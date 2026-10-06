@@ -605,6 +605,7 @@ p {
   object-fit: cover;
   object-position: center top;
   display: block;
+  margin: auto;
 }
 .session-fee {
     margin: 18px 0;
