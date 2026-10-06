@@ -129,7 +129,7 @@
 
           <div class="hero-photo">
               <img
-                src="clinic.jpg"
+                src="clinic.jpg" 
                 alt="24 Counselling clinic"
               />
           </div>
@@ -332,11 +332,60 @@
                 </a> -->
 
               </div>
-              <button class="voice-btn" onclick="toggleVoice('fila_voice', this)">
-                      🔊 Listen to Ayisha Fila
-              </button>
+              <div class="voice-waveform-switch" 
+                   id="switch_fila_voice" 
+                   data-audio="fila_voice" 
+                   role="switch" 
+                   aria-checked="false" 
+                   aria-label="Voice introduction by Ayisha Fila"
+                   tabindex="0"
+                   onclick="toggleVoiceSwitch('fila_voice', event)"
+                   onkeydown="handleVoiceSwitchKeydown('fila_voice', event)">
+                <button class="switch-knob" type="button" aria-label="Toggle voice introduction" tabindex="-1">
+                  <svg class="icon-play" viewBox="0 0 24 24" width="14" height="14">
+                    <polygon points="8 5 19 12 8 19 8 5" fill="currentColor"></polygon>
+                  </svg>
+                  <svg class="icon-pause" viewBox="0 0 24 24" width="14" height="14">
+                    <rect x="6" y="5" width="4" height="14" rx="1.5" fill="currentColor"></rect>
+                    <rect x="14" y="5" width="4" height="14" rx="1.5" fill="currentColor"></rect>
+                  </svg>
+                </button>
+                <div class="switch-content">
+                  <div class="switch-meta">
+                    <div class="switch-tag">
+                      <span class="switch-live-dot"></span>
+                      <span class="switch-label">Voice Intro</span>
+                    </div>
+                    <span class="switch-time">0:00</span>
+                  </div>
+                  <div class="waveform-track" title="Click to listen / seek">
+                    <span class="wave-bar" style="--h: 28%; --i: 1"></span>
+                    <span class="wave-bar" style="--h: 50%; --i: 2"></span>
+                    <span class="wave-bar" style="--h: 75%; --i: 3"></span>
+                    <span class="wave-bar" style="--h: 40%; --i: 4"></span>
+                    <span class="wave-bar" style="--h: 90%; --i: 5"></span>
+                    <span class="wave-bar" style="--h: 65%; --i: 6"></span>
+                    <span class="wave-bar" style="--h: 35%; --i: 7"></span>
+                    <span class="wave-bar" style="--h: 80%; --i: 8"></span>
+                    <span class="wave-bar" style="--h: 100%; --i: 9"></span>
+                    <span class="wave-bar" style="--h: 70%; --i: 10"></span>
+                    <span class="wave-bar" style="--h: 45%; --i: 11"></span>
+                    <span class="wave-bar" style="--h: 85%; --i: 12"></span>
+                    <span class="wave-bar" style="--h: 95%; --i: 13"></span>
+                    <span class="wave-bar" style="--h: 60%; --i: 14"></span>
+                    <span class="wave-bar" style="--h: 35%; --i: 15"></span>
+                    <span class="wave-bar" style="--h: 75%; --i: 16"></span>
+                    <span class="wave-bar" style="--h: 90%; --i: 17"></span>
+                    <span class="wave-bar" style="--h: 65%; --i: 18"></span>
+                    <span class="wave-bar" style="--h: 40%; --i: 19"></span>
+                    <span class="wave-bar" style="--h: 70%; --i: 20"></span>
+                    <span class="wave-bar" style="--h: 45%; --i: 21"></span>
+                    <span class="wave-bar" style="--h: 25%; --i: 22"></span>
+                  </div>
+                </div>
+              </div>
 
-              <audio id="fila_voice" src="fila_voice.ogg"></audio>
+              <audio id="fila_voice" src="fila_voice.ogg" preload="metadata"></audio>
               <a href="#appointment" class="doctor-button">
                 Book with Ayisha Fila →
               </a>
@@ -403,11 +452,60 @@
                 </a> -->
 
               </div>
-              <button class="voice-btn" onclick="toggleVoice('anjali_voice', this)">
-                      🔊 Listen to Anjali PP
-              </button>
+              <div class="voice-waveform-switch" 
+                   id="switch_anjali_voice" 
+                   data-audio="anjali_voice" 
+                   role="switch" 
+                   aria-checked="false" 
+                   aria-label="Voice introduction by Anjali PP"
+                   tabindex="0"
+                   onclick="toggleVoiceSwitch('anjali_voice', event)"
+                   onkeydown="handleVoiceSwitchKeydown('anjali_voice', event)">
+                <button class="switch-knob" type="button" aria-label="Toggle voice introduction" tabindex="-1">
+                  <svg class="icon-play" viewBox="0 0 24 24" width="14" height="14">
+                    <polygon points="8 5 19 12 8 19 8 5" fill="currentColor"></polygon>
+                  </svg>
+                  <svg class="icon-pause" viewBox="0 0 24 24" width="14" height="14">
+                    <rect x="6" y="5" width="4" height="14" rx="1.5" fill="currentColor"></rect>
+                    <rect x="14" y="5" width="4" height="14" rx="1.5" fill="currentColor"></rect>
+                  </svg>
+                </button>
+                <div class="switch-content">
+                  <div class="switch-meta">
+                    <div class="switch-tag">
+                      <span class="switch-live-dot"></span>
+                      <span class="switch-label">Voice Intro</span>
+                    </div>
+                    <span class="switch-time">0:00</span>
+                  </div>
+                  <div class="waveform-track" title="Click to listen / seek">
+                    <span class="wave-bar" style="--h: 35%; --i: 1"></span>
+                    <span class="wave-bar" style="--h: 60%; --i: 2"></span>
+                    <span class="wave-bar" style="--h: 40%; --i: 3"></span>
+                    <span class="wave-bar" style="--h: 85%; --i: 4"></span>
+                    <span class="wave-bar" style="--h: 95%; --i: 5"></span>
+                    <span class="wave-bar" style="--h: 65%; --i: 6"></span>
+                    <span class="wave-bar" style="--h: 50%; --i: 7"></span>
+                    <span class="wave-bar" style="--h: 90%; --i: 8"></span>
+                    <span class="wave-bar" style="--h: 100%; --i: 9"></span>
+                    <span class="wave-bar" style="--h: 70%; --i: 10"></span>
+                    <span class="wave-bar" style="--h: 40%; --i: 11"></span>
+                    <span class="wave-bar" style="--h: 75%; --i: 12"></span>
+                    <span class="wave-bar" style="--h: 90%; --i: 13"></span>
+                    <span class="wave-bar" style="--h: 55%; --i: 14"></span>
+                    <span class="wave-bar" style="--h: 35%; --i: 15"></span>
+                    <span class="wave-bar" style="--h: 80%; --i: 16"></span>
+                    <span class="wave-bar" style="--h: 95%; --i: 17"></span>
+                    <span class="wave-bar" style="--h: 65%; --i: 18"></span>
+                    <span class="wave-bar" style="--h: 45%; --i: 19"></span>
+                    <span class="wave-bar" style="--h: 75%; --i: 20"></span>
+                    <span class="wave-bar" style="--h: 40%; --i: 21"></span>
+                    <span class="wave-bar" style="--h: 20%; --i: 22"></span>
+                  </div>
+                </div>
+              </div>
 
-              <audio id="anjali_voice" src="anjali_voice.ogg"></audio>
+              <audio id="anjali_voice" src="anjali_voice.ogg" preload="metadata"></audio>
               <a href="#appointment" class="doctor-button">
                 Book with Anjali PP →
               </a>
@@ -472,11 +570,60 @@
                 </a> -->
 
               </div>
-              <button class="voice-btn" onclick="toggleVoice('asmina_voice', this)">
-                      🔊 Listen to Asmina K
-              </button>
+              <div class="voice-waveform-switch" 
+                   id="switch_asmina_voice" 
+                   data-audio="asmina_voice" 
+                   role="switch" 
+                   aria-checked="false" 
+                   aria-label="Voice introduction by Asmina K"
+                   tabindex="0"
+                   onclick="toggleVoiceSwitch('asmina_voice', event)"
+                   onkeydown="handleVoiceSwitchKeydown('asmina_voice', event)">
+                <button class="switch-knob" type="button" aria-label="Toggle voice introduction" tabindex="-1">
+                  <svg class="icon-play" viewBox="0 0 24 24" width="14" height="14">
+                    <polygon points="8 5 19 12 8 19 8 5" fill="currentColor"></polygon>
+                  </svg>
+                  <svg class="icon-pause" viewBox="0 0 24 24" width="14" height="14">
+                    <rect x="6" y="5" width="4" height="14" rx="1.5" fill="currentColor"></rect>
+                    <rect x="14" y="5" width="4" height="14" rx="1.5" fill="currentColor"></rect>
+                  </svg>
+                </button>
+                <div class="switch-content">
+                  <div class="switch-meta">
+                    <div class="switch-tag">
+                      <span class="switch-live-dot"></span>
+                      <span class="switch-label">Voice Intro</span>
+                    </div>
+                    <span class="switch-time">0:00</span>
+                  </div>
+                  <div class="waveform-track" title="Click to listen / seek">
+                    <span class="wave-bar" style="--h: 20%; --i: 1"></span>
+                    <span class="wave-bar" style="--h: 45%; --i: 2"></span>
+                    <span class="wave-bar" style="--h: 75%; --i: 3"></span>
+                    <span class="wave-bar" style="--h: 60%; --i: 4"></span>
+                    <span class="wave-bar" style="--h: 90%; --i: 5"></span>
+                    <span class="wave-bar" style="--h: 100%; --i: 6"></span>
+                    <span class="wave-bar" style="--h: 75%; --i: 7"></span>
+                    <span class="wave-bar" style="--h: 45%; --i: 8"></span>
+                    <span class="wave-bar" style="--h: 65%; --i: 9"></span>
+                    <span class="wave-bar" style="--h: 85%; --i: 10"></span>
+                    <span class="wave-bar" style="--h: 95%; --i: 11"></span>
+                    <span class="wave-bar" style="--h: 65%; --i: 12"></span>
+                    <span class="wave-bar" style="--h: 40%; --i: 13"></span>
+                    <span class="wave-bar" style="--h: 70%; --i: 14"></span>
+                    <span class="wave-bar" style="--h: 90%; --i: 15"></span>
+                    <span class="wave-bar" style="--h: 80%; --i: 16"></span>
+                    <span class="wave-bar" style="--h: 50%; --i: 17"></span>
+                    <span class="wave-bar" style="--h: 85%; --i: 18"></span>
+                    <span class="wave-bar" style="--h: 60%; --i: 19"></span>
+                    <span class="wave-bar" style="--h: 40%; --i: 20"></span>
+                    <span class="wave-bar" style="--h: 30%; --i: 21"></span>
+                    <span class="wave-bar" style="--h: 18%; --i: 22"></span>
+                  </div>
+                </div>
+              </div>
 
-              <audio id="asmina_voice" src="asmina_voice.ogg"></audio>
+              <audio id="asmina_voice" src="asmina_voice.ogg" preload="metadata"></audio>
               <a href="#appointment" class="doctor-button">
                 Book with Asmina K →
               </a>

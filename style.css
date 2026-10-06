@@ -1130,34 +1130,231 @@ p {
   font-size: 9px;
 }
 
-/* ================= VOICE ================= */
+/* ================= VOICE WAVEFORM SWITCH ================= */
+
+.voice-waveform-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 9px 14px 9px 10px;
+  margin: 12px 0 16px 0;
+  background: #f4f8f5;
+  border: 1.5px solid #d4e2db;
+  border-radius: 50px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(49, 92, 80, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.voice-waveform-switch:hover {
+  background: #edf5f0;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(49, 92, 80, 0.1);
+}
+
+.voice-waveform-switch:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.voice-waveform-switch.is-playing {
+  background: #eaf3ec;
+  border-color: var(--primary);
+  box-shadow: 0 6px 20px rgba(49, 92, 80, 0.14);
+}
+
+/* Switch Knob / Toggle Button */
+.switch-knob {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #315c50 0%, #21483e 100%);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(33, 72, 62, 0.35);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.voice-waveform-switch:hover .switch-knob {
+  transform: scale(1.06);
+  box-shadow: 0 4px 14px rgba(33, 72, 62, 0.45);
+}
+
+.voice-waveform-switch.is-playing .switch-knob {
+  background: linear-gradient(135deg, #255246 0%, #1a3c32 100%);
+  animation: knobPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes knobPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(49, 92, 80, 0.5), 0 3px 10px rgba(33, 72, 62, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(49, 92, 80, 0), 0 3px 10px rgba(33, 72, 62, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(49, 92, 80, 0), 0 3px 10px rgba(33, 72, 62, 0.35);
+  }
+}
+
+.switch-knob svg {
+  display: block;
+  fill: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.switch-knob .icon-play {
+  margin-left: 2px;
+  display: block;
+}
+
+.switch-knob .icon-pause {
+  display: none;
+}
+
+.voice-waveform-switch.is-playing .switch-knob .icon-play {
+  display: none;
+}
+
+.voice-waveform-switch.is-playing .switch-knob .icon-pause {
+  display: block;
+}
+
+/* Switch Center Content */
+.switch-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  gap: 4px;
+}
+
+.switch-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+}
+
+.switch-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.switch-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #315c50;
+  transition: color 0.2s ease;
+}
+
+.switch-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #315c50;
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.voice-waveform-switch.is-playing .switch-live-dot {
+  opacity: 1;
+  transform: scale(1);
+  background: #28a745;
+  animation: liveDotPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes liveDotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.65); }
+}
+
+.switch-time {
+  font-size: 11px;
+  font-weight: 600;
+  color: #647a70;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.2px;
+}
+
+.voice-waveform-switch.is-playing .switch-time {
+  color: #21483e;
+  font-weight: 700;
+}
+
+/* Waveform Track */
+.waveform-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5px;
+  height: 22px;
+  width: 100%;
+  padding: 1px 0;
+  cursor: pointer;
+}
+
+.wave-bar {
+  flex: 1;
+  min-width: 2px;
+  max-width: 4px;
+  height: var(--h, 30%);
+  background: #b5c8bc;
+  border-radius: 99px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  transform-origin: center;
+}
+
+.voice-waveform-switch:hover .wave-bar {
+  background: #a2b7aa;
+}
+
+.wave-bar.bar-played {
+  background: #315c50 !important;
+}
+
+/* Dynamic Equalizer Animation on Waveform Bars */
+.voice-waveform-switch.is-playing .wave-bar {
+  animation: waveBarBounce 0.85s infinite ease-in-out alternate;
+  animation-delay: calc(var(--i) * 0.045s);
+}
+
+@keyframes waveBarBounce {
+  0% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1.35);
+  }
+  100% {
+    transform: scaleY(0.65);
+  }
+}
+
+/* Fallback for any legacy .voice-btn */
 .voice-btn {
-    width: 100%;
-    padding: 13px 18px;
-    margin-top: 18px;
-
-    border: 1px solid #2f6f5e;
-    border-radius: 10px;
-
-    background: #f4f8f5;
-    color: #2f6f5e;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    cursor: pointer;
-    transition: all 0.25s ease;
+  display: none;
 }
 
-.voice-btn:hover {
-    background: #2f6f5e;
-    color: white;
-}
-
-.voice-btn.playing {
-    background: #2f6f5e;
-    color: white;
-}
 
 /* ================= RESPONSIVE ================= */
 
@@ -1256,7 +1453,17 @@ p {
 
 
 @media (max-width: 650px) {
+    .logo img {
+    height: 45px;
+  }
 
+  .logo strong {
+    font-size: 16px;
+  }
+
+  .logo small {
+    font-size: 7px;
+  }
   .container {
     width: min(100% - 28px, 1160px);
   }
