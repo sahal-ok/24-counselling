@@ -106,6 +106,10 @@ p {
   align-items: center;
   gap: 10px;
 }
+.logo-number {
+  font-size: 28px;
+  font-weight: 800;
+}
 .logo img {
     height: 55px;
     width: auto;
